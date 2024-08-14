@@ -8,9 +8,9 @@ export default function Home() {
       bg="brand.background"
       paddingX={{ base: "5px", lg: "10px" }}
     >
-      {/* <Box minHeight="100vh" pt={{ lg: "20px" }}> */}
-      <HomeView />
-      {/* </Box> */}
+      <Box minHeight="100vh" pt={{ lg: "20px" }}>
+        <HomeView />
+      </Box>
     </Box>
   );
 }

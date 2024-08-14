@@ -31,7 +31,7 @@ export default function HomeView() {
       <SendInviteModal isOpen={isOpen} onClose={onClose} />
       <Header />
 
-      {/* <Box
+      <Box
         height="130px"
         bg="brand.secondary"
         borderRadius="10px"
@@ -174,7 +174,7 @@ export default function HomeView() {
             </Text>
           </Checkbox>
         </Box>
-      </Box> */}
+      </Box>
     </Box>
   );
 }

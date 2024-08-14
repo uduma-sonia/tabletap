@@ -7,22 +7,14 @@ import {
   Button,
   IconButton,
 } from "@chakra-ui/react";
-import { useViewportHeight } from "../../hooks/useViewport";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 export default function ForgotPasswordForm() {
-  const height = useViewportHeight();
   const navigate = useNavigate();
 
   return (
-    <Box
-      backgroundColor="white"
-      height={height}
-      // display="flex"
-      // alignItems="stretch"
-      padding="20px"
-    >
+    <Box backgroundColor="white" height="100vh" padding="20px">
       <Box
         height="100%"
         bg="transparent"

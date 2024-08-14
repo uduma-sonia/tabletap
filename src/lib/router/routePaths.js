@@ -1,7 +1,8 @@
 export const RoutePaths = Object.freeze({
   BASE_URL: "/",
   LOGIN: "/login",
-  // ABOUT: "/about",
+  SIGNUP: "/create-account",
+  FORGOT_PASSWORD: "/forgot-password",
   // SERVICES: "/services",
   // CONTACT: "/contact",
   // CAREERS: "/careers",

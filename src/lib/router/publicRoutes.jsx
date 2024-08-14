@@ -1,5 +1,5 @@
 import { RoutePaths } from "./routePaths";
-import { Home, Login } from "../../pages";
+import { Home, Login, Signup, ForgotPassword } from "../../pages";
 
 export const publicRoutes = [
   {
@@ -9,5 +9,13 @@ export const publicRoutes = [
   {
     route: RoutePaths.LOGIN,
     page: <Login />,
+  },
+  {
+    route: RoutePaths.SIGNUP,
+    page: <Signup />,
+  },
+  {
+    route: RoutePaths.FORGOT_PASSWORD,
+    page: <ForgotPassword />,
   },
 ];

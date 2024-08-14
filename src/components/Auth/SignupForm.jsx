@@ -11,7 +11,7 @@ import { useViewportHeight } from "../../hooks/useViewport";
 import { Link } from "react-router-dom";
 import { RoutePaths } from "../../lib/router/routePaths";
 
-export default function LoginForm() {
+export default function SignupForm() {
   const height = useViewportHeight();
 
   return (
@@ -32,7 +32,7 @@ export default function LoginForm() {
       >
         <Box maxWidth="500px">
           <Text fontWeight="700" fontSize="4xl" textAlign="center">
-            Welcome Back!
+            Create Account
           </Text>
           <Text fontSize="sm" fontWeight="medium" textAlign="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -50,7 +50,16 @@ export default function LoginForm() {
                 color="black"
               />
             </FormControl>
-            <FormControl mt="1.5rem">
+            <FormControl my="1.5rem">
+              <FormLabel fontWeight="600">Email</FormLabel>
+              <Input
+                placeholder="trippy"
+                borderRadius="20px"
+                borderColor="black"
+                color="black"
+              />
+            </FormControl>
+            <FormControl>
               <FormLabel fontWeight="600">Password</FormLabel>
               <Input
                 type="password"
@@ -67,9 +76,9 @@ export default function LoginForm() {
               mt="20px"
               mb="40px"
             >
-              <Link to={RoutePaths.SIGNUP}>
+              <Link to={RoutePaths.LOGIN}>
                 <Text fontSize="sm" fontWeight="semibold">
-                  Create account
+                  Login
                 </Text>
               </Link>
               <Link to={RoutePaths.FORGOT_PASSWORD}>
@@ -85,7 +94,7 @@ export default function LoginForm() {
               borderRadius="20px"
               height="45px"
             >
-              Login
+              Create Account
             </Button>
           </Box>
         </Box>
@@ -106,7 +115,7 @@ export default function LoginForm() {
         >
           <div>
             <Image
-              src="/images/undraw_travelers_1.svg"
+              src="/images/undraw_stranded_traveler.svg"
               width="auto"
               maxWidth="400px"
             />

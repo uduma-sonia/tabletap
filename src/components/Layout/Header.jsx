@@ -1,21 +1,23 @@
 import { Box, Text, Avatar } from "@chakra-ui/react";
 
-export default function Header() {
+export default function Header({
+  title = "Hi, Sonia! 👋",
+  subText = "Welcome back and explore the world",
+}) {
   return (
     <Box
       height="100px"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      borderBottom="1px solid gray"
       px={{ base: "1rem", md: "2rem", lg: "3rem", xl: "4rem" }}
     >
       <Box>
         <Text fontSize="2xl" fontWeight="700">
-          Hi, Sonia! 👋
+          {title}
         </Text>
         <Text fontSize="sm" fontWeight="medium">
-          Welcome back and explore the world
+          {subText}
         </Text>
       </Box>
       <Box>

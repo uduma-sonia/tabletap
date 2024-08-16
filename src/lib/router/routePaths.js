@@ -5,4 +5,7 @@ export const RoutePaths = Object.freeze({
   FORGOT_PASSWORD: "/forgot-password",
 
   DASHBOARD: "/dashboard",
+
+  ALL_TRIPS: "/trips",
+  TRIP_DETAILS: "/trip/:id",
 });

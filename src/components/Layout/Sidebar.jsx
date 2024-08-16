@@ -10,11 +10,13 @@ const defaultRoutes = [
     label: "Dashboard",
     icon: <HiHome />,
     route: RoutePaths.DASHBOARD,
+    keyword: "dashboard",
   },
   {
     label: "My Trips",
     icon: <MdSpaceDashboard size="1rem" />,
-    route: RoutePaths.BASE_URL,
+    route: RoutePaths.ALL_TRIPS,
+    keyword: "trip",
   },
   {
     label: "Settings",
@@ -42,8 +44,10 @@ export default function Sidebar() {
       </Box>
 
       <Box mt="20px" display="flex" flexDir="column" gap="20px" px="10px">
-        {defaultRoutes?.map(({ label, route, icon }) => {
-          const isActive = router.pathname === route;
+        {defaultRoutes?.map(({ label, route, icon, keyword }) => {
+          // const isActive = router.pathname === route;
+          const path = router.pathname;
+          const isActive = path?.includes(keyword);
 
           return (
             <Link key={label} to={route}>

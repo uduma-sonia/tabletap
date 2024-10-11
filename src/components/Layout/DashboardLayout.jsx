@@ -1,33 +1,54 @@
-import { Box } from "@chakra-ui/react";
+import {
+  Box,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from "@chakra-ui/react";
 import { useViewportHeight } from "../../hooks/useViewport";
-import Sidebar from "./Sidebar";
+import DefaultHeader from "./DefaultHeader";
+import DefaultSidebar from "./DefaultSidebar";
 
 export default function DashboardLayout({ children }) {
   const height = useViewportHeight();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box
-      backgroundColor="#FFFFFF"
-      minHeight="100vh"
       display="flex"
-      alignItems="top"
+      bg="#f5f7f5"
+      mx="auto"
+      justifyContent="flex-start"
+      minH={height}
     >
       <Box
-        width="250px"
-        height={height}
-        display={{ base: "none", lg: "block" }}
+        bg="#031c03"
+        width="230px"
+        minWidth="230px"
+        display={{ base: "none", md: "block" }}
       >
-        <Sidebar />
+        <DefaultSidebar />
       </Box>
-      <Box
-        maxHeight={height}
-        borderRadius={{ lg: "30px" }}
-        flex="1 1 0px"
-        overflowY="auto"
-        bg="#eff0ed"
-      >
-        {children}
+
+      <Box flex="1 1 0px">
+        <DefaultHeader openSideBar={onOpen} />
+        <Box
+          maxHeight="calc(100vh - 100px)"
+          overflowY="auto"
+          overflowX="hidden"
+        >
+          {children}
+        </Box>
       </Box>
+
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent bg="#031c03">
+          <DrawerCloseButton color="white" />
+          <DefaultSidebar />
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }

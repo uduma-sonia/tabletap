@@ -6,12 +6,14 @@ export const Select = {
     ...theme.components.Input.variants,
     primary: {
       field: {
-        height: "42px",
+        height: "45px",
         border: "1.4px solid",
         borderRadius: "10px",
-        fontSize: "sm",
-        borderColor: "brand.400",
+        borderColor: "black",
+        color: "#222222",
+        fontWeight: "600",
         cursor: "pointer",
+        fontSize: "sm",
         _placeholder: { opacity: "1", fontWeight: "300" },
         _invalid: {
           borderWidth: "1.4px",

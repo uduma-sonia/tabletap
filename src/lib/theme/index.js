@@ -1,12 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Button, Input, Select } from "./components";
-import { currentTheme } from "./appColors";
+// import { currentTheme } from "./appColors";
 
 let selectedFont = "Manrope Variable";
 
-if (localStorage.getItem("custom-app-font") !== null) {
-  selectedFont = localStorage.getItem("custom-app-font");
-}
+// if (localStorage.getItem("custom-app-font") !== null) {
+//   selectedFont = localStorage.getItem("custom-app-font");
+// }
 
 const theme = extendTheme({
   components: {
@@ -16,10 +16,10 @@ const theme = extendTheme({
   },
   colors: {
     brand: {
-      background: currentTheme.background,
-      light: currentTheme.light,
-      textLight: currentTheme.textLight,
-      secondary: currentTheme.secondary,
+      primary: "#228B22",
+      light: "#3bf73b",
+      gray: "#ebf2eb",
+      // secondary: currentTheme.secondary,
     },
     green: {
       main: "#5F6F52",

@@ -6,10 +6,13 @@ import {
   Input,
   Button,
   Image,
+  Select,
 } from "@chakra-ui/react";
 import { useViewportHeight } from "../../hooks/useViewport";
 import { Link } from "react-router-dom";
 import { RoutePaths } from "../../lib/router/routePaths";
+import { restaurantTypes } from "../../lib/data/restaurantTypes";
+import { countries } from "../../lib/data/countries";
 
 export default function SignupForm() {
   const height = useViewportHeight();
@@ -22,83 +25,6 @@ export default function SignupForm() {
       alignItems="stretch"
       padding="20px"
     >
-      <Box
-        width={{ base: "100%", lg: "50%" }}
-        height="100%"
-        bg="transparent"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Box maxWidth="500px">
-          <Text fontWeight="700" fontSize="4xl" textAlign="center">
-            Create Account
-          </Text>
-          <Text fontSize="sm" fontWeight="medium" textAlign="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </Text>
-
-          <Box marginTop="3rem">
-            <FormControl>
-              <FormLabel fontWeight="600">Username</FormLabel>
-              <Input
-                placeholder="trippy"
-                borderRadius="20px"
-                borderColor="black"
-                color="black"
-              />
-            </FormControl>
-            <FormControl my="1.5rem">
-              <FormLabel fontWeight="600">Email</FormLabel>
-              <Input
-                placeholder="trippy"
-                borderRadius="20px"
-                borderColor="black"
-                color="black"
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel fontWeight="600">Password</FormLabel>
-              <Input
-                type="password"
-                placeholder="********"
-                borderRadius="20px"
-                borderColor="black"
-                color="black"
-              />
-            </FormControl>
-
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              mt="20px"
-              mb="40px"
-            >
-              <Link to={RoutePaths.LOGIN}>
-                <Text fontSize="sm" fontWeight="semibold">
-                  Login
-                </Text>
-              </Link>
-              <Link to={RoutePaths.FORGOT_PASSWORD}>
-                <Text fontSize="sm" fontWeight="semibold">
-                  Forgot password?
-                </Text>
-              </Link>
-            </Box>
-
-            <Button
-              backgroundColor="#000000"
-              width="100%"
-              borderRadius="20px"
-              height="45px"
-            >
-              Create Account
-            </Button>
-          </Box>
-        </Box>
-      </Box>
       <Box
         width={{ base: "100%", lg: "50%" }}
         display={{ base: "none", lg: "block" }}
@@ -151,6 +77,86 @@ export default function SignupForm() {
             live your adventure. Discover, organize, and explore with ease—your
             next adventure starts here.
           </Text>
+        </Box>
+      </Box>
+      <Box
+        width={{ base: "100%", lg: "50%" }}
+        height="100%"
+        bg="transparent"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box maxWidth="500px" width="100%">
+          <Text fontWeight="700" fontSize="4xl" textAlign="center">
+            Create Account
+          </Text>
+          <Text fontSize="sm" fontWeight="medium" textAlign="center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam
+          </Text>
+
+          <Box marginTop="3rem">
+            <FormControl>
+              <FormLabel fontWeight="600">Restaurant Name</FormLabel>
+              <Input placeholder="trippy" />
+            </FormControl>
+            <FormControl my="1.5rem">
+              <FormLabel fontWeight="600">Email</FormLabel>
+              <Input placeholder="abc@gmail.com" type="email" />
+            </FormControl>
+            <FormControl my="1.5rem">
+              <FormLabel fontWeight="600">Restaurant Type</FormLabel>
+              <Select>
+                {restaurantTypes?.map((item) => (
+                  <option value={item} key={item}>
+                    {item}
+                  </option>
+                ))}
+              </Select>
+            </FormControl>
+            <FormControl my="1.5rem">
+              <FormLabel fontWeight="600">Country</FormLabel>
+              <Select>
+                {countries.map((item) => {
+                  return (
+                    <option value={item.name} key={item.name}>
+                      {item.name}
+                    </option>
+                  );
+                })}
+              </Select>
+            </FormControl>
+            <FormControl>
+              <FormLabel fontWeight="600">Password</FormLabel>
+              <Input type="password" placeholder="********" />
+            </FormControl>
+
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              mt="20px"
+              mb="40px"
+            >
+              <Link to={RoutePaths.LOGIN}>
+                <Text fontSize="sm" fontWeight="semibold">
+                  Login
+                </Text>
+              </Link>
+              <Link to={RoutePaths.FORGOT_PASSWORD}>
+                <Text fontSize="sm" fontWeight="semibold">
+                  Forgot password?
+                </Text>
+              </Link>
+            </Box>
+
+            <a href="/dashboard">
+              <Button backgroundColor="#000000" width="100%">
+                Create Account
+              </Button>
+            </a>
+          </Box>
         </Box>
       </Box>
     </Box>

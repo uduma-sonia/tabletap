@@ -4,12 +4,13 @@ export const Button = {
   ...theme.components.Button,
   variants: {
     primary: {
-      fontSize: "sm",
-      height: "fit-content",
-      py: "5px",
+      fontSize: "md",
+      height: "45px",
+      fontWeight: "700",
       boxShadow: "lg",
-      bg: "brand.secondary",
+      bg: "brand.primary",
       color: "white",
+      borderRadius: "10px",
     },
     thick: {
       fontSize: "sm",

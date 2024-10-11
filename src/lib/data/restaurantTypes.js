@@ -1,0 +1,17 @@
+export const restaurantTypes = [
+  "Fine Dining",
+  "Casual Dining",
+  "Fast Casual",
+  "Fast Food",
+  "Café or Bistro",
+  "Buffet",
+  "Food Truck",
+  "Pop-Up Restaurant",
+  "Family Style",
+  "Ghost Kitchen / Cloud Kitchen",
+  "Ethnic Restaurant",
+  "Pizzeria",
+  "Steakhouse",
+  "Brasserie",
+  "Pub / Gastropub",
+];

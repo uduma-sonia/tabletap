@@ -1,16 +1,20 @@
-import { Box } from "@chakra-ui/react";
-import HomeView from "../components/Home/HomeView";
+import { Box, Button } from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <Box
-      minHeight="100vh"
-      bg="brand.background"
-      paddingX={{ base: "5px", lg: "10px" }}
+      display="flex"
+      alignItems="center"
+      flexDir="column"
+      justifyContent="center"
+      height="100vh"
+      fontSize="3xl"
     >
-      <Box minHeight="100vh" pt={{ lg: "20px" }}>
-        <HomeView />
-      </Box>
+      <div>Restaurant Management App</div>
+
+      <a href="/login">
+        <Button>Get started</Button>
+      </a>
     </Box>
   );
 }

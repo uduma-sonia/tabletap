@@ -7,13 +7,13 @@ export default function Routers() {
   return (
     <BrowserRouter>
       <Routes>
-        {publicRoutes.map(({ route, page }) => {
-          return <Route key={route} path={route} element={page} />;
+        {publicRoutes.map(({ route, page }, index) => {
+          return <Route key={index} path={route} element={page} />;
         })}
 
         {/* <Route element={<RouteGuard />}> */}
-        {privateRoutes.map(({ route, page }) => {
-          return <Route key={route} path={route} element={page} />;
+        {privateRoutes.map(({ route, page }, index) => {
+          return <Route key={index} path={route} element={page} />;
         })}
         {/* </Route> */}
 

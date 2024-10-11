@@ -56,6 +56,7 @@ export default function ForgotPasswordForm() {
               width="100%"
               borderRadius="20px"
               height="45px"
+              onG
             >
               Submit
             </Button>

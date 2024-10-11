@@ -1,5 +1,5 @@
 import { RoutePaths } from "./routePaths";
-import { Dashboard, Menu, MenuCategory } from "../../pages";
+import { Dashboard, Menu, MenuCategory, Orders } from "../../pages";
 
 export const privateRoutes = [
   {
@@ -13,5 +13,9 @@ export const privateRoutes = [
   {
     route: RoutePaths.MENU_CATEGORY,
     page: <MenuCategory />,
+  },
+  {
+    route: RoutePaths.ORDERS,
+    page: <Orders />,
   },
 ];

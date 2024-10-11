@@ -23,7 +23,7 @@ export default function DashboardLayout({ children }) {
       minH={height}
     >
       <Box
-        bg="#031c03"
+        bg="brand.dark"
         width="230px"
         minWidth="230px"
         display={{ base: "none", md: "block" }}

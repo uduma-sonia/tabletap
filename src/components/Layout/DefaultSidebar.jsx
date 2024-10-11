@@ -17,31 +17,31 @@ export default function DefaultSidebar() {
     {
       icon: <BsMenuAppFill size="1.4rem" />,
       label: "Menu",
-      route: RoutePaths.DASHBOARD,
+      route: RoutePaths.MENU,
       keyWord: "menu",
     },
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
       label: "QR Code",
-      route: RoutePaths.DASHBOARD,
+      route: RoutePaths.QR_CODE,
       keyWord: "code",
     },
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
       label: "Orders",
-      route: RoutePaths.DASHBOARD,
+      route: RoutePaths.ORDERS,
       keyWord: "orders",
     },
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
       label: "Insights",
-      route: RoutePaths.DASHBOARD,
+      route: RoutePaths.INSIGHT,
       keyWord: "insight",
     },
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
       label: "Settings",
-      route: RoutePaths.DASHBOARD,
+      route: RoutePaths.SETTINGS,
       keyWord: "settings",
     },
   ];

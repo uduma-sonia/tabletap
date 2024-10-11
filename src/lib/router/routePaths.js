@@ -5,4 +5,15 @@ export const RoutePaths = Object.freeze({
   // FORGOT_PASSWORD: "/forgot-password",
 
   DASHBOARD: "/dashboard",
+
+  MENU: "/menu",
+  MENU_CATEGORY: "/menu/:category",
+
+  QR_CODE: "/qr-code",
+
+  ORDERS: "/orders",
+
+  INSIGHT: "/insights",
+
+  SETTINGS: "/settings",
 });

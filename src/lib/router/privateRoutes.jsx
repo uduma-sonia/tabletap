@@ -1,17 +1,17 @@
 import { RoutePaths } from "./routePaths";
-import { Dashboard } from "../../pages";
+import { Dashboard, Menu, MenuCategory } from "../../pages";
 
 export const privateRoutes = [
   {
     route: RoutePaths.DASHBOARD,
     page: <Dashboard />,
   },
-  // {
-  //   route: RoutePaths.ALL_TRIPS,
-  //   page: <AllTrips />,
-  // },
-  // {
-  //   route: RoutePaths.TRIP_DETAILS,
-  //   page: <TripDetails />,
-  // },
+  {
+    route: RoutePaths.MENU,
+    page: <Menu />,
+  },
+  {
+    route: RoutePaths.MENU_CATEGORY,
+    page: <MenuCategory />,
+  },
 ];

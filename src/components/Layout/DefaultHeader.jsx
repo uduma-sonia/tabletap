@@ -1,7 +1,15 @@
 import { Box, IconButton, Text } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useLocation } from "react-router-dom";
 
 export default function DefaultHeader({ openSideBar }) {
+  const router = useLocation();
+  const pathname = router.pathname;
+  const checkWordInString = (word, str) => {
+    return str.includes(word);
+  };
+  const isMenu = checkWordInString("menu", pathname) ? "Menu" : "";
+
   return (
     <Box
       display="flex"
@@ -10,8 +18,8 @@ export default function DefaultHeader({ openSideBar }) {
       position="relative"
       zIndex={9}
       borderBottom="1px solid"
-      borderBottomColor="#878a87"
-      shadow="md"
+      borderBottomColor="brand.gray"
+      shadow="sm"
       gap="10px"
       px={{ base: "1rem", lg: "2rem" }}
     >
@@ -26,19 +34,9 @@ export default function DefaultHeader({ openSideBar }) {
       />
       <Box>
         <Text fontWeight="semibold" fontSize={{ base: "lg", md: "xl" }}>
-          Welcome Admin
+          {isMenu || "Welcome Admin"}
         </Text>
       </Box>
     </Box>
   );
-}
-{
-  /* <Button
-variant="unstyled"
-minW={0}
-display={{ base: "block", lg: "none" }}
-onClick={openSideBar}
->
-<GiHamburgerMenu size="1.4rem" />
-</Button> */
 }

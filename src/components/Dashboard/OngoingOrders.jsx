@@ -8,15 +8,23 @@ import {
   Tbody,
   Td,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import StatusTag from "../Common/StatusTag";
 import { Link } from "react-router-dom";
 import { Pagination } from "../Common/Pagination";
 
-export default function OrderTable() {
+export default function OngoingOrders() {
   return (
     <Box>
+      <Text fontSize="xl" fontWeight="medium">
+        Ongoing orders
+      </Text>
+      <Text fontSize="sm" fontWeight="medium">
+        Orders accepted but not completed
+      </Text>
       <Box
+        mt="10px"
         bg="white"
         borderRadius="10px"
         border="1px solid"
@@ -25,32 +33,73 @@ export default function OrderTable() {
       >
         <TableContainer position="relative" borderTopRadius="10px" zIndex={9}>
           <Table variant="simple">
-            <Thead bg="brand.dark" height="50px">
+            <Thead bg="brand.dar" height="50px">
               <Tr>
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Order
                 </Th>
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Table number / name
                 </Th>
-                {/* <Th color="white" textTransform="none">
+                {/* <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Order type
                 </Th> */}
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Status
                 </Th>
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Amount
                 </Th>
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Payment{" "}
                 </Th>
-                <Th color="white" textTransform="none">
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                >
                   Created
                 </Th>
-                <Th />
+                <Th
+                  color="brand.dark"
+                  textTransform="none"
+                  borderBottom="1px solid"
+                  borderBottomColor="brand.dark"
+                />
               </Tr>
             </Thead>
+
             <Tbody>
               <Tr>
                 <Td
@@ -58,6 +107,7 @@ export default function OrderTable() {
                   fontWeight="semibold"
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
+                  textDecor="underline"
                 >
                   <Link>#1009</Link>
                 </Td>
@@ -123,10 +173,10 @@ const ActionItems = () => {
   return (
     <Box display="flex" gap="4px" justifyContent="flex-end">
       <Button height="30px" fontSize="sm">
-        Accept
+        Complete
       </Button>
       <Button height="30px" fontSize="sm" bg="#F44336">
-        Decline
+        Cancel
       </Button>
     </Box>
   );

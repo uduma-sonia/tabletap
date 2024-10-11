@@ -1,10 +1,10 @@
-import DashboardView from "../../components/Dashboard/DashboardView";
+import QRCodesView from "../../components/Code/QRCodesView";
 import DashboardLayout from "../../components/Layout/DashboardLayout";
 
-export default function Dashboard() {
+export default function QRCodes() {
   return (
     <DashboardLayout>
-      <DashboardView />
+      <QRCodesView />
     </DashboardLayout>
   );
 }

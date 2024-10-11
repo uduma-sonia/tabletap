@@ -11,9 +11,11 @@ import {
   Input,
   FormLabel,
   Textarea,
+  Select,
 } from "@chakra-ui/react";
+import { countries } from "../../lib/data/countries";
 
-export default function CreateMenuCategoryModal({ onClose, isOpen }) {
+export default function GenerateCodeModal({ onClose, isOpen }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
@@ -26,17 +28,17 @@ export default function CreateMenuCategoryModal({ onClose, isOpen }) {
           borderTopRadius="16px"
           fontWeight="semibold"
         >
-          Create Menu Category
+          Generate code
         </ModalHeader>
         <ModalCloseButton color="white" />
 
         <ModalBody mt="1rem">
           <FormControl>
-            <FormLabel fontWeight="600">Name</FormLabel>
+            <FormLabel fontWeight="600">Table Name</FormLabel>
             <Input placeholder="Beverages" />
           </FormControl>
 
-          <FormControl mt="1.5rem">
+          <FormControl my="1.5rem">
             <FormLabel fontWeight="600">Description</FormLabel>
             <Textarea
               borderColor="black"
@@ -54,9 +56,22 @@ export default function CreateMenuCategoryModal({ onClose, isOpen }) {
               placeholder="Description"
             />
           </FormControl>
+
+          <FormControl>
+            <FormLabel fontWeight="600">Assign to (optional)</FormLabel>
+            <Select>
+              {countries.map((item) => {
+                return (
+                  <option value={item.name} key={item.name}>
+                    {item.name}
+                  </option>
+                );
+              })}
+            </Select>
+          </FormControl>
         </ModalBody>
 
-        <ModalFooter>
+        <ModalFooter mt="2rem">
           <Button variant="ghost" mr={3} onClick={onClose}>
             Cancel
           </Button>

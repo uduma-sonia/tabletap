@@ -16,4 +16,6 @@ export const RoutePaths = Object.freeze({
   INSIGHT: "/insights",
 
   SETTINGS: "/settings",
+
+  EMPLOYEES: "/employees",
 });

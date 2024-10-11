@@ -6,3 +6,5 @@ export { default as Dashboard } from "./Dashboard/Dashboard";
 export { default as Menu } from "./Menu/Menu";
 export { default as MenuCategory } from "./Menu/Category";
 export { default as Orders } from "./Orders/Orders";
+export { default as QRCodes } from "./Code/QRCodes";
+export { default as Employees } from "./Employees/Employees";

@@ -31,12 +31,11 @@ export default function DashboardLayout({ children }) {
         <DefaultSidebar />
       </Box>
 
-      <Box flex="1 1 0px">
+      <Box flex="1 1 0px" className="tiny-scrollbar" overflowX="auto">
         <DefaultHeader openSideBar={onOpen} />
         <Box
           maxHeight="calc(100vh - 100px)"
           overflowY="auto"
-          overflowX="hidden"
           p={{ base: "1rem", lg: "2rem" }}
         >
           {children}

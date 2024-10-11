@@ -1,6 +1,6 @@
 import { Tag } from "@chakra-ui/react";
 
-export default function StatusTag({ status }) {
+export default function StatusTag({ status, label }) {
   const retrieveStatusColor = (arg) => {
     const STATUS = arg.toUpperCase();
 
@@ -17,7 +17,7 @@ export default function StatusTag({ status }) {
 
   return (
     <Tag bg={retrieveStatusColor(status)} color="white" fontSize="sm">
-      Completed
+      {label || status}
     </Tag>
   );
 }

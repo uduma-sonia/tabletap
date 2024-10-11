@@ -9,13 +9,24 @@ import {
   Td,
   Button,
 } from "@chakra-ui/react";
-import StatusTag from "../Common/StatusTag";
 import { Link } from "react-router-dom";
 import { Pagination } from "../Common/Pagination";
+import StatusTag from "../Common/StatusTag";
 
-export default function OrderTable() {
+export default function EmployeesTable() {
   return (
     <Box>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-end"
+        mb="1rem"
+      >
+        <Box>
+          <Button height="40px">Add employee</Button>
+        </Box>
+      </Box>
+
       <Box
         bg="white"
         borderRadius="10px"
@@ -28,25 +39,25 @@ export default function OrderTable() {
             <Thead bg="brand.dark" height="50px">
               <Tr>
                 <Th color="white" textTransform="none">
-                  Order
+                  Name
                 </Th>
                 <Th color="white" textTransform="none">
-                  Table number / name
+                  Email
                 </Th>
-                {/* <Th color="white" textTransform="none">
-                  Order type
-                </Th> */}
+                <Th color="white" textTransform="none">
+                  Position
+                </Th>
+                <Th color="white" textTransform="none">
+                  Role
+                </Th>
+                <Th color="white" textTransform="none">
+                  Assigned to
+                </Th>
+                <Th color="white" textTransform="none">
+                  Orders
+                </Th>
                 <Th color="white" textTransform="none">
                   Status
-                </Th>
-                <Th color="white" textTransform="none">
-                  Amount
-                </Th>
-                <Th color="white" textTransform="none">
-                  Payment{" "}
-                </Th>
-                <Th color="white" textTransform="none">
-                  Created
                 </Th>
                 <Th />
               </Tr>
@@ -59,7 +70,7 @@ export default function OrderTable() {
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
                 >
-                  <Link>#1009</Link>
+                  <Link>John Paul</Link>
                 </Td>
 
                 <Td
@@ -68,18 +79,7 @@ export default function OrderTable() {
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
                 >
-                  11
-                </Td>
-                {/* <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  Dine-in
-                </Td> */}
-                <Td borderBottom="1px solid" borderBottomColor="gray.200">
-                  <StatusTag status="SERVED" />
+                  jonpaul@gmail.com
                 </Td>
                 <Td
                   fontSize="sm"
@@ -87,7 +87,16 @@ export default function OrderTable() {
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
                 >
-                  $1000
+                  Chef
+                </Td>
+
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  Employee
                 </Td>
                 <Td
                   fontSize="sm"
@@ -95,7 +104,7 @@ export default function OrderTable() {
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
                 >
-                  Group pay
+                  Asana
                 </Td>
                 <Td
                   fontSize="sm"
@@ -103,7 +112,15 @@ export default function OrderTable() {
                   borderBottom="1px solid"
                   borderBottomColor="gray.200"
                 >
-                  2 min ago
+                  9
+                </Td>
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  <StatusTag status="Accepted" label="Active" />
                 </Td>
                 <Td borderBottom="1px solid" borderBottomColor="gray.200">
                   <ActionItems />
@@ -123,10 +140,10 @@ const ActionItems = () => {
   return (
     <Box display="flex" gap="4px" justifyContent="flex-end">
       <Button height="30px" fontSize="sm">
-        Accept
+        Disable
       </Button>
       <Button height="30px" fontSize="sm" bg="#F44336">
-        Decline
+        Remove
       </Button>
     </Box>
   );

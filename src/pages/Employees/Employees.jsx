@@ -1,10 +1,10 @@
-import DashboardView from "../../components/Dashboard/DashboardView";
+import EmployeesView from "../../components/Employees/EmployeesView";
 import DashboardLayout from "../../components/Layout/DashboardLayout";
 
-export default function Dashboard() {
+export default function Employees() {
   return (
     <DashboardLayout>
-      <DashboardView />
+      <EmployeesView />
     </DashboardLayout>
   );
 }

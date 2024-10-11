@@ -15,6 +15,12 @@ export default function DefaultSidebar() {
       keyWord: "dashboard",
     },
     {
+      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      label: "Orders",
+      route: RoutePaths.ORDERS,
+      keyWord: "orders",
+    },
+    {
       icon: <BsMenuAppFill size="1.4rem" />,
       label: "Menu",
       route: RoutePaths.MENU,
@@ -28,10 +34,11 @@ export default function DefaultSidebar() {
     },
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
-      label: "Orders",
-      route: RoutePaths.ORDERS,
-      keyWord: "orders",
+      label: "Employees",
+      route: RoutePaths.EMPLOYEES,
+      keyWord: "employees",
     },
+
     {
       icon: <TbLayoutDashboardFilled size="1.4rem" />,
       label: "Insights",

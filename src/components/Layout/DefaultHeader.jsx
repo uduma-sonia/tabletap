@@ -9,6 +9,9 @@ export default function DefaultHeader({ openSideBar }) {
     return str.includes(word);
   };
   const isMenu = checkWordInString("menu", pathname) ? "Menu" : "";
+  const isOrder = checkWordInString("order", pathname) ? "Orders" : "";
+  const isEmployee = checkWordInString("employee", pathname) ? "Employees" : "";
+  const isCode = checkWordInString("code", pathname) ? "QR Code" : "";
 
   return (
     <Box
@@ -34,7 +37,7 @@ export default function DefaultHeader({ openSideBar }) {
       />
       <Box>
         <Text fontWeight="semibold" fontSize={{ base: "lg", md: "xl" }}>
-          {isMenu || "Welcome Admin"}
+          {isMenu || isOrder || isEmployee || isCode || "Welcome Admin"}
         </Text>
       </Box>
     </Box>

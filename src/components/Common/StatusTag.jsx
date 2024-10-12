@@ -16,7 +16,12 @@ export default function StatusTag({ status, label }) {
   };
 
   return (
-    <Tag bg={retrieveStatusColor(status)} color="white" fontSize="sm">
+    <Tag
+      bg={retrieveStatusColor(status)}
+      color="white"
+      fontSize="sm"
+      textTransform="capitalize"
+    >
       {label || status}
     </Tag>
   );

@@ -12,6 +12,7 @@ import {
 import StatusTag from "../Common/StatusTag";
 import { Link } from "react-router-dom";
 import { Pagination } from "../Common/Pagination";
+import { orderObject } from "../../lib/data/orderData";
 
 export default function OrderTable() {
   return (
@@ -31,7 +32,7 @@ export default function OrderTable() {
                   Order
                 </Th>
                 <Th color="white" textTransform="none">
-                  Table number / name
+                  Code
                 </Th>
                 {/* <Th color="white" textTransform="none">
                   Order type
@@ -52,25 +53,27 @@ export default function OrderTable() {
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  <Link>#1009</Link>
-                </Td>
+              {orderObject?.map((item, index) => {
+                return (
+                  <Tr key={index}>
+                    <Td
+                      fontSize="sm"
+                      fontWeight="semibold"
+                      borderBottom="1px solid"
+                      borderBottomColor="gray.200"
+                    >
+                      <Link>{item.order_no}</Link>
+                    </Td>
 
-                <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  11
-                </Td>
-                {/* <Td
+                    <Td
+                      fontSize="sm"
+                      fontWeight="semibold"
+                      borderBottom="1px solid"
+                      borderBottomColor="gray.200"
+                    >
+                      {item.code_name}
+                    </Td>
+                    {/* <Td
                   fontSize="sm"
                   fontWeight="semibold"
                   borderBottom="1px solid"
@@ -78,37 +81,39 @@ export default function OrderTable() {
                 >
                   Dine-in
                 </Td> */}
-                <Td borderBottom="1px solid" borderBottomColor="gray.200">
-                  <StatusTag status="SERVED" />
-                </Td>
-                <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  $1000
-                </Td>
-                <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  Group pay
-                </Td>
-                <Td
-                  fontSize="sm"
-                  fontWeight="semibold"
-                  borderBottom="1px solid"
-                  borderBottomColor="gray.200"
-                >
-                  2 min ago
-                </Td>
-                <Td borderBottom="1px solid" borderBottomColor="gray.200">
-                  <ActionItems />
-                </Td>
-              </Tr>
+                    <Td borderBottom="1px solid" borderBottomColor="gray.200">
+                      <StatusTag status={item.status} />
+                    </Td>
+                    <Td
+                      fontSize="sm"
+                      fontWeight="semibold"
+                      borderBottom="1px solid"
+                      borderBottomColor="gray.200"
+                    >
+                      ${item.amount}
+                    </Td>
+                    <Td
+                      fontSize="sm"
+                      fontWeight="semibold"
+                      borderBottom="1px solid"
+                      borderBottomColor="gray.200"
+                    >
+                      {item.payment_option}
+                    </Td>
+                    <Td
+                      fontSize="sm"
+                      fontWeight="semibold"
+                      borderBottom="1px solid"
+                      borderBottomColor="gray.200"
+                    >
+                      2 min ago
+                    </Td>
+                    <Td borderBottom="1px solid" borderBottomColor="gray.200">
+                      <ActionItems status={item.status} />
+                    </Td>
+                  </Tr>
+                );
+              })}
             </Tbody>
           </Table>
         </TableContainer>
@@ -119,15 +124,28 @@ export default function OrderTable() {
   );
 }
 
-const ActionItems = () => {
+const ActionItems = ({ status }) => {
+  const STATUS = status.toUpperCase();
+
   return (
     <Box display="flex" gap="4px" justifyContent="flex-end">
-      <Button height="30px" fontSize="sm">
-        Accept
-      </Button>
-      <Button height="30px" fontSize="sm" bg="#F44336">
-        Decline
-      </Button>
+      {STATUS === "PENDING" && (
+        <Button height="30px" fontSize="sm" bg="#4CAF50">
+          Accept
+        </Button>
+      )}
+
+      {STATUS === "ACCEPTED" && (
+        <Button height="30px" fontSize="sm" bg="#3F51B5">
+          Complete
+        </Button>
+      )}
+
+      {STATUS === "PENDING" && (
+        <Button height="30px" fontSize="sm" bg="#F44336">
+          Decline
+        </Button>
+      )}
     </Box>
   );
 };

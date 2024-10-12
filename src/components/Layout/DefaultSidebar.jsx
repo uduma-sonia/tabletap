@@ -7,6 +7,7 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { SiGoogleanalytics } from "react-icons/si";
 import { FaUsers } from "react-icons/fa";
 import { LuQrCode } from "react-icons/lu";
+import { PiTableBold } from "react-icons/pi";
 
 export default function DefaultSidebar() {
   const router = useLocation();
@@ -19,7 +20,7 @@ export default function DefaultSidebar() {
       keyWord: "dashboard",
     },
     {
-      icon: <TbLayoutDashboardFilled size="1.3rem" />,
+      icon: <PiTableBold size="1.3rem" />,
       label: "Orders",
       route: RoutePaths.ORDERS,
       keyWord: "orders",
@@ -81,8 +82,8 @@ export default function DefaultSidebar() {
                 <Box
                   width="100%"
                   bg="transparent"
-                  fontSize="18px"
-                  fontWeight="400"
+                  fontSize="16px"
+                  fontWeight={isActive ? "700" : "400"}
                   color={isActive ? "brand.light" : "#edf2ed"}
                   display="flex"
                   alignItems="center"

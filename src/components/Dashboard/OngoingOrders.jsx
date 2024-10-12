@@ -12,16 +12,22 @@ import {
 } from "@chakra-ui/react";
 import StatusTag from "../Common/StatusTag";
 import { Link } from "react-router-dom";
-import { Pagination } from "../Common/Pagination";
 
 export default function OngoingOrders() {
   return (
-    <Box>
-      <Text fontSize="xl" fontWeight="700">
-        Ongoing orders (1)
+    <Box
+      bg="white"
+      border="1px solid"
+      borderColor="gray.200"
+      borderRadius="16px"
+      boxShadow="sm"
+      padding="16px"
+    >
+      <Text fontSize="sm" fontWeight="700">
+        Ongoing orders (2)
       </Text>
-      <Text fontSize="sm" fontWeight="medium">
-        Orders accepted but not completed
+      <Text fontSize="xs" fontWeight="medium">
+        Orders accepted
       </Text>
       <Box
         mt="10px"
@@ -159,11 +165,67 @@ export default function OngoingOrders() {
                   <ActionItems />
                 </Td>
               </Tr>
+              <Tr>
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                  textDecor="underline"
+                >
+                  <Link>#1009</Link>
+                </Td>
+
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  11
+                </Td>
+                {/* <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  Dine-in
+                </Td> */}
+                <Td borderBottom="1px solid" borderBottomColor="gray.200">
+                  <StatusTag status="ACCEPTED" />
+                </Td>
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  $1000
+                </Td>
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  Group pay
+                </Td>
+                <Td
+                  fontSize="sm"
+                  fontWeight="semibold"
+                  borderBottom="1px solid"
+                  borderBottomColor="gray.200"
+                >
+                  2 min ago
+                </Td>
+                <Td borderBottom="1px solid" borderBottomColor="gray.200">
+                  <ActionItems />
+                </Td>
+              </Tr>
             </Tbody>
           </Table>
         </TableContainer>
-
-        <Pagination disableNext={4} />
       </Box>
     </Box>
   );

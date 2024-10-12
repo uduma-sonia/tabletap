@@ -12,15 +12,33 @@ import {
 } from "@chakra-ui/react";
 import StatusTag from "../Common/StatusTag";
 import { Link } from "react-router-dom";
-import { Pagination } from "../Common/Pagination";
 
 export default function PendingOrders() {
   return (
-    <Box>
-      <Text fontSize="xl" fontWeight="700">
+    <Box
+      bg="white"
+      border="1px solid"
+      borderColor="gray.200"
+      borderRadius="16px"
+      boxShadow="sm"
+      padding="16px"
+    >
+      <Text
+        fontSize="sm"
+        fontWeight="700"
+        display="flex"
+        alignItems="center"
+        gap="10px"
+      >
         Pending orders (1)
+        <Box
+          className="pulsing_item"
+          boxSize="23px"
+          bg="green.500"
+          borderRadius="full"
+        />
       </Text>
-      <Text fontSize="sm" fontWeight="medium">
+      <Text fontSize="xs" fontWeight="medium">
         Orders sent in and not accepted
       </Text>
       <Box
@@ -146,8 +164,6 @@ export default function PendingOrders() {
             </Tbody>
           </Table>
         </TableContainer>
-
-        <Pagination disableNext={4} />
       </Box>
     </Box>
   );

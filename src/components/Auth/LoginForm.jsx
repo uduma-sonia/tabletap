@@ -5,11 +5,12 @@ import {
   FormLabel,
   Input,
   Button,
-  Image,
 } from "@chakra-ui/react";
 import { useViewportHeight } from "../../hooks/useViewport";
 import { Link } from "react-router-dom";
 import { RoutePaths } from "../../lib/router/routePaths";
+import { FaArrowRightLong } from "react-icons/fa6";
+import TableTapName from "../Common/TableTapName";
 
 export default function LoginForm() {
   const height = useViewportHeight();
@@ -20,62 +21,41 @@ export default function LoginForm() {
       height={height}
       display="flex"
       alignItems="stretch"
-      padding="20px"
     >
       <Box
         width={{ base: "100%", lg: "50%" }}
         display={{ base: "none", lg: "block" }}
         height="100%"
-        bg="#B3B79240"
-        borderRadius="20px"
+        backgroundImage='linear-gradient(180deg, rgba(0,0,0,0.7) 23%, rgba(34,32,30,0.7) 75%), url("/images/dining_background.jpg")'
+        backgroundRepeat="no-repeat"
+        backgroundPosition="center"
+        backgroundSize="cover"
+        position="relative"
       >
+        <Box position="absolute" top="16px" left="2rem">
+          <TableTapName />
+        </Box>
         <Box
-          height="80%"
+          height="100%"
+          width="100%"
           display="flex"
           alignItems="center"
           justifyContent="center"
-          position="relative"
         >
-          <div>
-            <Image
-              src="/images/undraw_travelers_1.svg"
-              width="auto"
-              maxWidth="400px"
-            />
-          </div>
-          <Box position="absolute" bottom="4rem" right="4rem">
-            <Image
-              src="/images/undraw_aircraft.svg"
-              width="auto"
-              maxWidth="200px"
-            />
+          <Box padding="30px" color="white">
+            <Text fontWeight="900" fontSize="5xl" lineHeight="100%">
+              Turn Tables Faster,
+            </Text>
+            <Text fontWeight="900" fontSize="5xl" lineHeight="100%">
+              Serve Better.
+            </Text>
+            <Text mt="14px" fontWeight="700" fontSize="lg">
+              Effortless Ordering, Exceptional Dining.
+            </Text>
           </Box>
-          <Box position="absolute" top="5rem" left="4rem">
-            <Image
-              src="/images/undraw_cabin.svg"
-              width="auto"
-              maxWidth="100px"
-            />
-          </Box>
-        </Box>
-
-        <Box padding="30px" height="20%">
-          <Text
-            fontWeight="400"
-            textAlign="center"
-            maxWidth="700px"
-            mx="auto"
-            fontSize="xl"
-          >
-            Plan your journey with{" "}
-            <Text as="span" fontWeight="600">
-              TravelSphere,
-            </Text>{" "}
-            live your adventure. Discover, organize, and explore with ease—your
-            next adventure starts here.
-          </Text>
         </Box>
       </Box>
+
       <Box
         width={{ base: "100%", lg: "50%" }}
         height="100%"
@@ -83,48 +63,92 @@ export default function LoginForm() {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        px={{ base: "1.5rem", lg: "0" }}
+        position="relative"
       >
+        <Box
+          position="absolute"
+          top="16px"
+          left="1.5rem"
+          display={{ base: "black", lg: "none" }}
+        >
+          <TableTapName color="#000000" />
+        </Box>
         <Box maxWidth="500px" width="100%">
-          <Text fontWeight="700" fontSize="4xl" textAlign="center">
-            Welcome Back!
+          <Text fontWeight="700" fontSize="xl" textAlign="center">
+            Welcome Back
           </Text>
-          <Text fontSize="sm" fontWeight="medium" textAlign="center">
-            Log into your dashboard
+          <Text fontSize="xs" fontWeight="medium" textAlign="center">
+            Enter your details and proceed
           </Text>
 
           <Box marginTop="3rem">
+            <FormControl my="1.5rem">
+              <FormLabel fontWeight="600" fontSize="sm">
+                Email
+              </FormLabel>
+              <Input type="email" />
+            </FormControl>
+
             <FormControl>
-              <FormLabel fontWeight="600">Email</FormLabel>
-              <Input placeholder="admin@email.com" />
-            </FormControl>
-            <FormControl mt="1.5rem">
-              <FormLabel fontWeight="600">Password</FormLabel>
-              <Input type="password" placeholder="********" />
+              <FormLabel fontWeight="600" fontSize="sm">
+                Password
+              </FormLabel>
+              <Input type="password" />
             </FormControl>
 
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              mt="10px"
-              mb="40px"
-            >
-              <Link to={RoutePaths.SIGNUP}>
+            <Box mt="2rem">
+              <a href="/dashboard">
+                <Button backgroundColor="#000000" width="100%">
+                  Login
+                </Button>
+              </a>
+              <br />
+              <br />
+
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                gap="10px"
+              >
                 <Text fontSize="sm" fontWeight="semibold">
-                  Create account
+                  Don&apos;t have an account?
                 </Text>
-              </Link>
-              <Link to={RoutePaths.FORGOT_PASSWORD}>
-                <Text fontSize="sm" fontWeight="semibold">
-                  Forgot password?
-                </Text>
-              </Link>
+                <Link to={RoutePaths.SIGNUP}>
+                  <Text
+                    fontSize="sm"
+                    fontWeight="semibold"
+                    display="flex"
+                    alignItems="center"
+                    gap="10px"
+                    color="brand.primary"
+                  >
+                    Signup here <FaArrowRightLong size="1.2rem" />
+                  </Text>
+                </Link>
+              </Box>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                gap="10px"
+                mt="16px"
+              >
+                <Link to={RoutePaths.SIGNUP}>
+                  <Text
+                    fontSize="sm"
+                    fontWeight="semibold"
+                    display="flex"
+                    alignItems="center"
+                    gap="10px"
+                    color="brand.primary"
+                  >
+                    Forgot password? <FaArrowRightLong size="1.2rem" />
+                  </Text>
+                </Link>
+              </Box>
             </Box>
-
-            <a href="/dashboard">
-              <Button backgroundColor="#000000" width="100%">
-                Login
-              </Button>
-            </a>
           </Box>
         </Box>
       </Box>

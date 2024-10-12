@@ -12,6 +12,5 @@ export const restaurantTypes = [
   "Ethnic Restaurant",
   "Pizzeria",
   "Steakhouse",
-  "Brasserie",
   "Pub / Gastropub",
 ];

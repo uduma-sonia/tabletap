@@ -13,7 +13,7 @@ export const Input = {
         borderRadius: "10px",
         fontSize: "sm",
         bg: "transparent",
-        borderColor: "black",
+        borderColor: "brand.gray",
         color: "#222222",
         fontWeight: "600",
       },

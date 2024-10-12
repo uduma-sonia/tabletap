@@ -4,8 +4,7 @@ import {
   Login,
   Signup,
   ForgotPassword,
-  QRCodes,
-  Employees,
+  CreateCompanyAccount,
 } from "../../pages";
 
 export const publicRoutes = [
@@ -26,11 +25,7 @@ export const publicRoutes = [
     page: <ForgotPassword />,
   },
   {
-    route: RoutePaths.QR_CODE,
-    page: <QRCodes />,
-  },
-  {
-    route: RoutePaths.EMPLOYEES,
-    page: <Employees />,
+    route: RoutePaths.CREATE_COMPANY_ACCOUNT,
+    page: <CreateCompanyAccount />,
   },
 ];

@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import MenuItemCard from "./MenuItemCard";
 import CreateItemCard from "./CreateItemCard";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import DefaultHeadSEO from "../SEO";
 
 export default function MenuCategoryView() {
   const { category } = useParams();
@@ -10,6 +11,7 @@ export default function MenuCategoryView() {
 
   return (
     <Box>
+      <DefaultHeadSEO title={category} />
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box>
           <Link to={"/menu"}>

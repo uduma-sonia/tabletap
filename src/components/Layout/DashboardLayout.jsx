@@ -36,7 +36,8 @@ export default function DashboardLayout({ children }) {
         <Box
           maxHeight="calc(100vh - 100px)"
           overflowY="auto"
-          p={{ base: "1rem", lg: "2rem" }}
+          px={{ base: "1rem", lg: "2rem" }}
+          py="1rem"
         >
           {children}
         </Box>

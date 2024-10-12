@@ -9,7 +9,7 @@ export const Select = {
         height: "45px",
         border: "1.4px solid",
         borderRadius: "10px",
-        borderColor: "black",
+        borderColor: "brand.gray",
         color: "#222222",
         fontWeight: "600",
         cursor: "pointer",

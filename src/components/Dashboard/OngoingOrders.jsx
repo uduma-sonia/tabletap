@@ -17,8 +17,8 @@ import { Pagination } from "../Common/Pagination";
 export default function OngoingOrders() {
   return (
     <Box>
-      <Text fontSize="xl" fontWeight="medium">
-        Ongoing orders
+      <Text fontSize="xl" fontWeight="700">
+        Ongoing orders (1)
       </Text>
       <Text fontSize="sm" fontWeight="medium">
         Orders accepted but not completed
@@ -129,7 +129,7 @@ export default function OngoingOrders() {
                   Dine-in
                 </Td> */}
                 <Td borderBottom="1px solid" borderBottomColor="gray.200">
-                  <StatusTag status="SERVED" />
+                  <StatusTag status="ACCEPTED" />
                 </Td>
                 <Td
                   fontSize="sm"

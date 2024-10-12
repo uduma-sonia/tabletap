@@ -17,11 +17,11 @@ import { Pagination } from "../Common/Pagination";
 export default function PendingOrders() {
   return (
     <Box>
-      <Text fontSize="xl" fontWeight="medium">
-        Pending orders
+      <Text fontSize="xl" fontWeight="700">
+        Pending orders (1)
       </Text>
       <Text fontSize="sm" fontWeight="medium">
-        Orders sent it, not accepted
+        Orders sent in and not accepted
       </Text>
       <Box
         mt="10px"
@@ -51,14 +51,7 @@ export default function PendingOrders() {
                 >
                   Table number / name
                 </Th>
-                {/* <Th
-                    color="brand.dark"
-                    textTransform="none"
-                    borderBottom="1px solid"
-                    borderBottomColor="brand.dark"
-                  >
-                    Order type
-                  </Th> */}
+
                 <Th
                   color="brand.dark"
                   textTransform="none"
@@ -119,16 +112,8 @@ export default function PendingOrders() {
                 >
                   11
                 </Td>
-                {/* <Td
-                    fontSize="sm"
-                    fontWeight="semibold"
-                    borderBottom="1px solid"
-                    borderBottomColor="gray.200"
-                  >
-                    Dine-in
-                  </Td> */}
                 <Td borderBottom="1px solid" borderBottomColor="gray.200">
-                  <StatusTag status="SERVED" />
+                  <StatusTag status="PENDING" />
                 </Td>
                 <Td
                   fontSize="sm"

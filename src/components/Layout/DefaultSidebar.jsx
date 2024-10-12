@@ -3,52 +3,56 @@ import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { RoutePaths } from "../../lib/router/routePaths";
 import { Link, useLocation } from "react-router-dom";
 import { BsMenuAppFill } from "react-icons/bs";
+import { IoSettingsSharp } from "react-icons/io5";
+import { SiGoogleanalytics } from "react-icons/si";
+import { FaUsers } from "react-icons/fa";
+import { LuQrCode } from "react-icons/lu";
 
 export default function DefaultSidebar() {
   const router = useLocation();
 
   const defaultRoutes = [
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <TbLayoutDashboardFilled size="1.3rem" />,
       label: "Overview",
       route: RoutePaths.DASHBOARD,
       keyWord: "dashboard",
     },
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <TbLayoutDashboardFilled size="1.3rem" />,
       label: "Orders",
       route: RoutePaths.ORDERS,
       keyWord: "orders",
     },
     {
-      icon: <BsMenuAppFill size="1.4rem" />,
+      icon: <BsMenuAppFill size="1.3rem" />,
       label: "Menu",
       route: RoutePaths.MENU,
       keyWord: "menu",
     },
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <LuQrCode size="1.3rem" />,
       label: "QR Code",
       route: RoutePaths.QR_CODE,
       keyWord: "code",
     },
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <FaUsers size="1.3rem" />,
       label: "Employees",
       route: RoutePaths.EMPLOYEES,
       keyWord: "employees",
     },
 
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <SiGoogleanalytics size="1.3rem" />,
       label: "Insights",
       route: RoutePaths.INSIGHT,
       keyWord: "insight",
     },
     {
-      icon: <TbLayoutDashboardFilled size="1.4rem" />,
+      icon: <IoSettingsSharp size="1.3rem" />,
       label: "Settings",
-      route: RoutePaths.SETTINGS,
+      route: RoutePaths.SETTINGS_ACCOUNT,
       keyWord: "settings",
     },
   ];
@@ -77,9 +81,9 @@ export default function DefaultSidebar() {
                 <Box
                   width="100%"
                   bg="transparent"
-                  fontSize="20px"
+                  fontSize="18px"
                   fontWeight="400"
-                  color={isActive ? "brand.light" : "brand.gray"}
+                  color={isActive ? "brand.light" : "#edf2ed"}
                   display="flex"
                   alignItems="center"
                   gap="10px"

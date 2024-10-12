@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import OngoingOrders from "./OngoingOrders";
 import PendingOrders from "./PendingOrders";
 import StatCard from "./StatCard";
@@ -6,6 +6,10 @@ import StatCard from "./StatCard";
 export default function DashboardView() {
   return (
     <Box>
+      <Text fontSize="sm" fontWeight="semibold" mb="20px">
+        What is going on today?
+      </Text>
+
       <Box
         display="grid"
         gap="10px"
@@ -21,7 +25,9 @@ export default function DashboardView() {
         <StatCard label="Active menus" value="30" />
       </Box>
       <br />
+      <br />
       <PendingOrders />
+      <br />
       <br />
       <OngoingOrders />
     </Box>

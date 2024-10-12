@@ -1,5 +1,13 @@
 import { RoutePaths } from "./routePaths";
-import { Dashboard, Menu, MenuCategory, Orders } from "../../pages";
+import {
+  Dashboard,
+  Menu,
+  MenuCategory,
+  Orders,
+  Settings,
+  QRCodes,
+  Employees,
+} from "../../pages";
 
 export const privateRoutes = [
   {
@@ -17,5 +25,17 @@ export const privateRoutes = [
   {
     route: RoutePaths.ORDERS,
     page: <Orders />,
+  },
+  {
+    route: RoutePaths.SETTINGS_ACCOUNT,
+    page: <Settings />,
+  },
+  {
+    route: RoutePaths.QR_CODE,
+    page: <QRCodes />,
+  },
+  {
+    route: RoutePaths.EMPLOYEES,
+    page: <Employees />,
   },
 ];

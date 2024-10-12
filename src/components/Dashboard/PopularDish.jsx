@@ -32,7 +32,7 @@ export default function PopularDish() {
           py="10px"
           px="10px"
         >
-          <Text>Menu</Text>
+          <Text fontWeight="700">Menu</Text>
         </Box>
 
         <Box px="10px">

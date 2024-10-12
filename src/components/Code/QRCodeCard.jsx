@@ -1,37 +1,38 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-export default function QRCodeCard() {
+export default function QRCodeCard({ route }) {
   return (
-    <Box
-      height="350px"
-      border="1px solid black"
-      borderRadius="16px"
-      overflow="hidden"
-    >
-      <Box height="250px" borderRadius="16px">
-        <Image
-          src="/images/qrcode_placeholder.jpeg"
-          height="100%"
-          width="100%"
+    <Box minWidth={{ base: "100%", md: "250px" }} width="250px">
+      <Link to={route}>
+        <Box
+          border="1px solid"
+          borderColor="gray.300"
           borderRadius="10px"
-          objectFit="cover"
-        />
-      </Box>
+          bg="white"
+          width="100%"
+        >
+          <Box height="180px" borderRadius="10px" p="6px">
+            <Image
+              src="/images/qrcode_placeholder.jpeg"
+              borderRadius="10px"
+              width="100%"
+              objectFit="cover"
+              height="100%"
+            />
+          </Box>
 
-      <Box
-        padding="10px"
-        bg="gray.200"
-        height="100px"
-        borderBottomRadius="16px"
-      >
-        <Text>11</Text>
-
-        <Text fontSize="sm" fontWeight="semibold">
-          Active
-        </Text>
-
-        <Text fontWeight="semibold">Assigned to: Employee name</Text>
-      </Box>
+          <Box padding="10px">
+            <Text>Pearl</Text>
+            <Text fontSize="sm" fontWeight="semibold">
+              Active
+            </Text>
+            <Text fontSize="sm" fontWeight="semibold">
+              Assigned:
+            </Text>
+          </Box>
+        </Box>
+      </Link>
     </Box>
   );
 }

@@ -31,7 +31,9 @@ export default function PendingOrders() {
         gap="10px"
       >
         Pending orders (1)
-        <Box
+        <Text
+          as="span"
+          display="block"
           className="pulsing_item"
           boxSize="23px"
           bg="green.500"

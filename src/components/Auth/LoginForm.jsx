@@ -26,7 +26,7 @@ export default function LoginForm() {
         width={{ base: "100%", lg: "50%" }}
         display={{ base: "none", lg: "block" }}
         height="100%"
-        backgroundImage='linear-gradient(180deg, rgba(0,0,0,0.7) 23%, rgba(34,32,30,0.7) 75%), url("/images/dining_background.jpg")'
+        backgroundImage='linear-gradient(180deg, rgba(0,0,0,0.7) 23%, rgba(34,32,30,0.7) 75%), url("/images/create_account_bg.jpg")'
         backgroundRepeat="no-repeat"
         backgroundPosition="center"
         backgroundSize="cover"

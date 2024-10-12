@@ -32,7 +32,7 @@ export default function PopularTable() {
           py="10px"
           px="10px"
         >
-          <Text>Table</Text>
+          <Text fontWeight="700">Table</Text>
         </Box>
 
         <Box px="10px">

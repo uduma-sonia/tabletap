@@ -17,17 +17,6 @@ export default function EmployeesTable() {
   return (
     <Box>
       <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="flex-end"
-        mb="1rem"
-      >
-        <Box>
-          <Button height="40px">Add employee</Button>
-        </Box>
-      </Box>
-
-      <Box
         bg="white"
         borderRadius="10px"
         border="1px solid"

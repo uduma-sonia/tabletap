@@ -32,12 +32,16 @@ export default function CreateMenuCategoryModal({ onClose, isOpen }) {
 
         <ModalBody mt="1rem">
           <FormControl>
-            <FormLabel fontWeight="600">Name</FormLabel>
+            <FormLabel fontWeight="600" fontSize="sm">
+              Name
+            </FormLabel>
             <Input placeholder="Beverages" />
           </FormControl>
 
           <FormControl mt="1.5rem">
-            <FormLabel fontWeight="600">Description</FormLabel>
+            <FormLabel fontWeight="600" fontSize="sm">
+              Description
+            </FormLabel>
             <Textarea
               borderColor="black"
               borderRadius="10px"

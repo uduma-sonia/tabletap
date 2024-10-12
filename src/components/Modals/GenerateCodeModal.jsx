@@ -34,14 +34,18 @@ export default function GenerateCodeModal({ onClose, isOpen }) {
 
         <ModalBody mt="1rem">
           <FormControl>
-            <FormLabel fontWeight="600">Table Name</FormLabel>
+            <FormLabel fontWeight="600" fontSize="sm">
+              Code Name
+            </FormLabel>
             <Input placeholder="Beverages" />
           </FormControl>
 
           <FormControl my="1.5rem">
-            <FormLabel fontWeight="600">Description</FormLabel>
+            <FormLabel fontWeight="600" fontSize="sm">
+              Description
+            </FormLabel>
             <Textarea
-              borderColor="black"
+              borderColor="brand.gray"
               borderRadius="10px"
               fontWeight="600"
               color="#222222"
@@ -58,7 +62,9 @@ export default function GenerateCodeModal({ onClose, isOpen }) {
           </FormControl>
 
           <FormControl>
-            <FormLabel fontWeight="600">Assign to (optional)</FormLabel>
+            <FormLabel fontWeight="600" fontSize="sm">
+              Assign to (optional)
+            </FormLabel>
             <Select>
               {countries.map((item) => {
                 return (

@@ -8,7 +8,7 @@ export const Button = {
       height: "45px",
       fontWeight: "700",
       boxShadow: "lg",
-      bg: "brand.primary",
+      bg: "brand.dark",
       color: "white",
       borderRadius: "10px",
     },

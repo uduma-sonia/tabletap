@@ -67,7 +67,7 @@ export default function DefaultSidebar() {
           fontWeight="800"
           letterSpacing="-3px"
         >
-          tabletap.
+          DineCrash.
         </Text>
       </Box>
 

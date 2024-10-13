@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 
 const DEFAULT_SEO_CONFIG = {
-  title: "tabletap.",
+  title: "DineCrash",
   description:
     "Make managing your restaurant's menu a breeze! Let customers scan a QR code at their table to check out your menu and order in no time. Keep track of everything with a real-time dashboard and streamline your restaurant's operations. Perfect for modern restaurants looking to level up their service.",
   icon: "/images/svg/512-logo.png",

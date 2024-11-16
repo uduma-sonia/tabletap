@@ -44,9 +44,7 @@ export default function MenuSettingsModal({ onClose, isOpen }) {
               <Tab py="10px" _selected={{ borderColor: "brand.primary" }}>
                 General
               </Tab>
-              <Tab py="10px" _selected={{ borderColor: "brand.primary" }}>
-                Variants
-              </Tab>
+
               <Tab py="10px" _selected={{ borderColor: "brand.primary" }}>
                 Dietary options
               </Tab>
@@ -71,18 +69,6 @@ export default function MenuSettingsModal({ onClose, isOpen }) {
                       </Text>
                     </Text>
                   </Checkbox>
-                </FormControl>
-              </TabPanel>
-
-              <TabPanel>
-                <FormControl>
-                  <FormLabel fontWeight="600" fontSize="sm">
-                    Eg. (Large, medium, small)
-                  </FormLabel>
-                  <Box mt="20px" mb="10px">
-                    <Tag>Small</Tag>
-                  </Box>
-                  <Input placeholder="Type and enter" />
                 </FormControl>
               </TabPanel>
 
